@@ -3,6 +3,7 @@ jdk:
  - oraclejdk8
 install:
 - mvn install -DskipTests=true -Dspring.profiles.active=test -Dmaven.javadoc.skip=true -B -V
+
 script:
 - mvn test -Dspring.profiles.active=test 
 
