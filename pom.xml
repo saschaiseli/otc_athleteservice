@@ -24,10 +24,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<sonar.coverage.exclusions>
-       **/Config/**/*,
-       **/domain/**/*
-    </sonar.coverage.exclusions>
 	</properties>
 
 	<dependencies>
@@ -137,13 +133,11 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.6.201602180812</version>
+				<version>0.8.1</version>
 				<configuration>
-					<exclude>ch.opentrainingcenter.otc.athlete.domain.*</exclude>
-					<!-- 
-					<exclude>ch.opentrainingcenter.otc.athlete.web.config.*</exclude>
-					 -->
-					<exclude>**/*Config.*</exclude>
+					<excludes>
+						
+					</excludes>
 				</configuration>
 				<executions>
 					<execution>
