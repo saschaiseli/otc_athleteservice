@@ -137,6 +137,8 @@
 				<configuration>
 					<excludes>
 						<exclude>**/*Config.*</exclude>
+						<exclude>**/*Bootstrap.*</exclude>
+						<exclude>AthleteServiceApplication.*</exclude>
 						<exclude>ch/opentrainingcenter/otc/athlete/domain/*</exclude>
 					</excludes>
 				</configuration>
