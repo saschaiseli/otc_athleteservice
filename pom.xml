@@ -136,7 +136,8 @@
 				<version>0.8.1</version>
 				<configuration>
 					<excludes>
-
+						<exclude>**/*Config.*</exclude>
+						<exclude>ch/opentrainingcenter/otc/athlete/domain/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
