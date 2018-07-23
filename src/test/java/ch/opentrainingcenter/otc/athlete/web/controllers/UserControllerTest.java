@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.Ignore;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,7 +31,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ch.opentrainingcenter.otc.athlete.domain.User;
 import ch.opentrainingcenter.otc.athlete.service.UserService;
-import ch.opentrainingcenter.otc.athlete.web.controllers.UserController;
 
 @WebMvcTest(UserController.class)
 public class UserControllerTest {
@@ -98,17 +96,23 @@ public class UserControllerTest {
 		verify(service, times(1)).findById(1L);
 	}
 
-	@Ignore
+	@Test
 	void createUser() throws Exception {
 		final User user = new User();
-		user.setId(0);
 		user.setFirstname("Sascha");
 		user.setLastname("Iseli");
 
-		mvc.perform(post("/api/user/{id}", String.valueOf(user.getId())).contentType(MediaType.APPLICATION_JSON)
-				.content(asJsonString(user))).andExpect(status().isOk());
+		final User userNew = new User();
+		userNew.setId(0);
+		userNew.setFirstname(user.getFirstname());
+		userNew.setLastname(user.getLastname());
 
-		verify(service, times(1)).createUser(user);
+		when(service.createUser(user)).thenReturn(user);
+
+		mvc.perform(post("/api/user/0").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user)))
+				.andExpect(status().isCreated());
+
+		verify(service, times(1)).createUser(userNew);
 	}
 
 	public String asJsonString(final Object obj) {
