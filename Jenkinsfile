@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Coverage') {
       steps {
-        sh 'mvn clean test jacoco:report coveralls:jacoco -Drun.profiles=test'
+        sh 'mvn clean test jacoco:report coveralls:report -Drun.profiles=test'
         archive "target/**/*"
         junit 'target/surefire-reports/*.xml'
       }
