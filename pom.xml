@@ -136,7 +136,7 @@
 				<version>0.8.1</version>
 				<configuration>
 					<excludes>
-						
+
 					</excludes>
 				</configuration>
 				<executions>
@@ -147,6 +147,18 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<format>xml</format>
+					<maxmem>256m</maxmem>
+					<!-- aggregated reports for multi-module projects -->
+					<aggregate>true</aggregate>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
