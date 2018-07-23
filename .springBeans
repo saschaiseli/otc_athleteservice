@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:ch.opentrainingcenter.service.athlete.UsermgmtApplication</config>
+		<config>java:ch.opentrainingcenter.otc.athlete.UsermgmtApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

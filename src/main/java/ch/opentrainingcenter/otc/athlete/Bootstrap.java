@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete;
+package ch.opentrainingcenter.otc.athlete;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,9 +6,9 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import ch.opentrainingcenter.service.athlete.domain.User;
-import ch.opentrainingcenter.service.athlete.repositories.UserRepo;
-import ch.opentrainingcenter.service.athlete.service.UserService;
+import ch.opentrainingcenter.otc.athlete.domain.User;
+import ch.opentrainingcenter.otc.athlete.repositories.UserRepo;
+import ch.opentrainingcenter.otc.athlete.service.UserService;
 
 import javax.validation.constraints.NotNull;
 

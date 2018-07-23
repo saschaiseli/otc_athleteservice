@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete.web.controllers;
+package ch.opentrainingcenter.otc.athlete.web.controllers;
 
 import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j;
@@ -9,8 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import ch.opentrainingcenter.service.athlete.domain.User;
-import ch.opentrainingcenter.service.athlete.service.UserService;
+import ch.opentrainingcenter.otc.athlete.domain.User;
+import ch.opentrainingcenter.otc.athlete.service.UserService;
 
 import java.net.URI;
 import java.util.List;

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ch.opentrainingcenter.service</groupId>
+	<groupId>ch.opentrainingcenter.otc</groupId>
 	<artifactId>athleteservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -24,6 +24,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<sonar.coverage.exclusions>
+       **/Config/**/*,
+       **/domain/**/*
+    </sonar.coverage.exclusions>
 	</properties>
 
 	<dependencies>
@@ -135,12 +139,11 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.6.201602180812</version>
 				<configuration>
-					<exclude>ch.opentrainingcenter.service.athlete.domain.*</exclude>
+					<exclude>ch.opentrainingcenter.otc.athlete.domain.*</exclude>
 					<!-- 
-					<exclude>ch.opentrainingcenter.service.athlete.web.config.*</exclude>
+					<exclude>ch.opentrainingcenter.otc.athlete.web.config.*</exclude>
 					 -->
 					<exclude>**/*Config.*</exclude>
-					<exclude>**/*Dev.*</exclude>
 				</configuration>
 				<executions>
 					<execution>

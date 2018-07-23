@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete.web.controllers;
+package ch.opentrainingcenter.otc.athlete.web.controllers;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
@@ -30,8 +30,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ch.opentrainingcenter.service.athlete.domain.User;
-import ch.opentrainingcenter.service.athlete.service.UserService;
+import ch.opentrainingcenter.otc.athlete.domain.User;
+import ch.opentrainingcenter.otc.athlete.service.UserService;
+import ch.opentrainingcenter.otc.athlete.web.controllers.UserController;
 
 @WebMvcTest(UserController.class)
 public class UserControllerTest {

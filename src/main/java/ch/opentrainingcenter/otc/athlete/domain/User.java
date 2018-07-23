@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete.domain;
+package ch.opentrainingcenter.otc.athlete.domain;
 
 import lombok.Data;
 

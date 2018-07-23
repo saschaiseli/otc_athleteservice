@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete.web.config;
+package ch.opentrainingcenter.otc.athlete.web.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

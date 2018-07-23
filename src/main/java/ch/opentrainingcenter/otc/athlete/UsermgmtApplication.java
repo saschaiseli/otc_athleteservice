@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete;
+package ch.opentrainingcenter.otc.athlete;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

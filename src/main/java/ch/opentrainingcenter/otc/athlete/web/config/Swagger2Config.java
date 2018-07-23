@@ -1,4 +1,4 @@
-package ch.opentrainingcenter.service.athlete.web.config;
+package ch.opentrainingcenter.otc.athlete.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,7 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
                 .groupName("public-api")
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("ch.opentrainingcenter.service.athlete.web.controllers"))
+                .apis(RequestHandlerSelectors.basePackage("ch.opentrainingcenter.otc.athlete.web.controllers"))
                 .paths(regex(".*api.*"))
                 .build();
     }
