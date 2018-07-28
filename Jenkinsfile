@@ -32,6 +32,11 @@ pipeline {
         sh 'mvn package'
       }
     }
+    stage('Create Docker Image') {
+      steps {
+        sh 'mvn dockerfile:build dockerfile:push'
+      }
+    }
     stage('Cleanup') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
